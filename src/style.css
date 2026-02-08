@@ -1,0 +1,151 @@
+:root {
+  font-family: 'Inter', 'SF Pro Text', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Light theme variables */
+  --bg-primary: #f5f7fb;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f8fafc;
+  --bg-hover: #fafbff;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+  --text-muted: #94a3b8;
+  --border-primary: #e2e8f0;
+  --border-secondary: #cbd5e1;
+  --border-accent: #cbd5f5;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 6px 16px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-up: 0 -8px 18px rgba(15, 23, 42, 0.08);
+  --accent-blue: #2563eb;
+  --accent-blue-hover: #1d4ed8;
+  --accent-blue-bg: #eff6ff;
+  --accent-blue-border: #bfdbfe;
+  --accent-green-bg: #f0fdf4;
+  --accent-green-text: #16a34a;
+  --accent-green-border: #bbf7d0;
+  --error-bg: #fee2e2;
+  --error-border: #fecaca;
+  --error-text: #991b1b;
+  --error-text-secondary: #b91c1c;
+  --error-code-bg: rgba(153, 27, 27, 0.06);
+  --error-retry-border: #fca5a5;
+  --error-retry-hover-bg: #fef2f2;
+  --error-retry-hover-border: #f87171;
+  --empty-border: #cbd5f5;
+  --empty-hover-border: #93c5fd;
+  --loading-overlay: rgba(248, 250, 252, 0.85);
+
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+:root.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #1a2332;
+  --bg-hover: #253347;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --text-muted: #64748b;
+  --border-primary: #334155;
+  --border-secondary: #475569;
+  --border-accent: #475569;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --shadow-up: 0 -8px 18px rgba(0, 0, 0, 0.25);
+  --accent-blue: #3b82f6;
+  --accent-blue-hover: #2563eb;
+  --accent-blue-bg: rgba(59, 130, 246, 0.15);
+  --accent-blue-border: rgba(59, 130, 246, 0.3);
+  --accent-green-bg: rgba(22, 163, 74, 0.15);
+  --accent-green-text: #4ade80;
+  --accent-green-border: rgba(74, 222, 128, 0.3);
+  --error-bg: rgba(239, 68, 68, 0.15);
+  --error-border: rgba(239, 68, 68, 0.3);
+  --error-text: #fca5a5;
+  --error-text-secondary: #f87171;
+  --error-code-bg: rgba(239, 68, 68, 0.1);
+  --error-retry-border: rgba(239, 68, 68, 0.4);
+  --error-retry-hover-bg: rgba(239, 68, 68, 0.1);
+  --error-retry-hover-border: #f87171;
+  --empty-border: #475569;
+  --empty-hover-border: #3b82f6;
+  --loading-overlay: rgba(15, 23, 42, 0.85);
+
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* Element Plus dark mode overrides */
+:root.dark .el-dialog {
+  --el-dialog-bg-color: #1e293b;
+  --el-dialog-title-font-size: 18px;
+  --el-border-color-lighter: #334155;
+}
+
+:root.dark .el-dialog__header {
+  border-bottom-color: #334155;
+}
+
+:root.dark .el-dialog__title {
+  color: #f1f5f9;
+}
+
+:root.dark .el-dialog__headerbtn .el-dialog__close {
+  color: #94a3b8;
+}
+
+:root.dark .el-dialog__body {
+  color: #cbd5e1;
+}
+
+:root.dark .el-table {
+  --el-table-bg-color: #1e293b;
+  --el-table-tr-bg-color: #1e293b;
+  --el-table-header-bg-color: #1a2332;
+  --el-table-row-hover-bg-color: #253347;
+  --el-table-border-color: #334155;
+  --el-table-text-color: #cbd5e1;
+  --el-table-header-text-color: #f1f5f9;
+}
+
+:root.dark .el-pagination {
+  --el-pagination-bg-color: #1e293b;
+  --el-pagination-text-color: #cbd5e1;
+  --el-pagination-button-bg-color: #334155;
+  --el-pagination-hover-color: #3b82f6;
+}
+
+:root.dark .el-input__wrapper {
+  background-color: #1a2332;
+  box-shadow: 0 0 0 1px #334155 inset;
+}
+
+:root.dark .el-input__inner {
+  color: #f1f5f9;
+}
