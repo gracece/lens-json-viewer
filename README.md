@@ -91,7 +91,7 @@ Build artifacts are output to `release/<version>/`:
 
 | Platform | Format | Architecture |
 |----------|--------|-------------|
-| macOS    | DMG    | arm64, x64  |
+| macOS    | DMG    | arm64       |
 | Windows  | NSIS installer | x64  |
 | Linux    | AppImage | x64        |
 

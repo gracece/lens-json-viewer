@@ -92,7 +92,7 @@ npm run build
 
 | 平台 | 格式 | 架构 |
 |------|------|------|
-| macOS | DMG | arm64, x64 |
+| macOS | DMG | arm64 |
 | Windows | NSIS 安装程序 | x64 |
 | Linux | AppImage | x64 |
 
