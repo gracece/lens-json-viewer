@@ -7,6 +7,7 @@
 
 [English](README.md) | **中文**
 
+![Build](https://github.com/gracece/lens-json-viewer/actions/workflows/build.yml/badge.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Electron](https://img.shields.io/badge/Electron-40-blueviolet)
@@ -91,9 +92,9 @@ npm run build
 
 | 平台 | 格式 | 架构 |
 |------|------|------|
-| macOS | DMG | arm64 |
+| macOS | DMG | arm64, x64 |
 | Windows | NSIS 安装程序 | x64 |
-| Linux | AppImage | — |
+| Linux | AppImage | x64 |
 
 ---
 
@@ -176,7 +177,6 @@ npm run build
 - 🌍 **多语言翻译**：在中英文基础上添加更多语言支持
 - 📸 **截图**：为 README 添加截图或演示 GIF
 - 🧪 **测试**：单元测试和集成测试覆盖
-- 📦 **CI/CD**：GitHub Actions 自动构建和发布
 - 📖 **文档**：完善代码内联文档
 
 ---

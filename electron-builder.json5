@@ -16,7 +16,8 @@
       {
         "target": "dmg",
         "arch": [
-          "arm64"
+          "arm64",
+          "x64"
         ]
       }
     ],
@@ -28,13 +29,13 @@
       "ext": "json",
       "name": "JSON",
       "description": "JSON Document",
-      "icon": "public/electron-vite.svg"
+      "icon": "public/lens.png"
     },
     {
       "ext": "jsonl",
       "name": "JSONL",
       "description": "JSON Lines Document",
-      "icon": "public/electron-vite.svg"
+      "icon": "public/lens.png"
     }
   ],
   "win": {

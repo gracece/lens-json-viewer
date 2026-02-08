@@ -6,6 +6,7 @@ A lightweight, fast desktop application for viewing, searching, and formatting J
 
 **English** | [中文](README.zh-CN.md)
 
+![Build](https://github.com/gracece/lens-json-viewer/actions/workflows/build.yml/badge.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Electron](https://img.shields.io/badge/Electron-40-blueviolet)
@@ -90,9 +91,9 @@ Build artifacts are output to `release/<version>/`:
 
 | Platform | Format | Architecture |
 |----------|--------|-------------|
-| macOS    | DMG    | arm64       |
+| macOS    | DMG    | arm64, x64  |
 | Windows  | NSIS installer | x64  |
-| Linux    | AppImage | —        |
+| Linux    | AppImage | x64        |
 
 ---
 
@@ -175,7 +176,6 @@ Contributions are welcome! Here's how you can help:
 - 🌍 **Translations**: Add more languages beyond English and Chinese
 - 📸 **Screenshots**: Add screenshots or a demo GIF to the README
 - 🧪 **Tests**: Unit and integration test coverage
-- 📦 **CI/CD**: GitHub Actions for automated builds and releases
 - 📖 **Documentation**: Improve inline code documentation
 
 ---
