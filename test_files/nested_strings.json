@@ -1,0 +1,10 @@
+{
+  "project": "Stringified JSON Test",
+  "description": "This file contains JSON objects stored as strings inside other JSON objects.",
+  "payload": "{\"info\": \"Level 2 wrapper\", \"internal_json\": \"{\\\"title\\\": \\\"Level 3 Container\\\", \\\"serialized_content\\\": \\\"{\\\\\\\"message\\\\\\\": \\\\\\\"Success\\\\\\\", \\\\\\\"code\\\\\\\": 200, \\\\\\\"meta\\\\\\\": \\\\\\\"This is the deepest level\\\\\\\"}\\\", \\\"tags\\\": [\\\"nested\\\", \\\"stringified\\\"]}\", \"timestamp\": \"2026-02-09T13:00:00Z\"}",
+  "sibling_data": "Normal top-level string",
+  "complex_array": [
+    "{\"item\": 1}",
+    "{\"item\": 2, \"sub\": \"{\\\"key\\\": \\\"val\\\"}\"}"
+  ]
+}

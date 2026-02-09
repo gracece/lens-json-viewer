@@ -1,0 +1,1502 @@
+[
+  {
+    "id": 1,
+    "uuid": "abc-0001-xyz",
+    "name": "Item Name Number 1",
+    "description": "This is a descriptive text for item number 1. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 19.59,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 2,
+    "uuid": "abc-0002-xyz",
+    "name": "Item Name Number 2",
+    "description": "This is a descriptive text for item number 2. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 43.8,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 3,
+    "uuid": "abc-0003-xyz",
+    "name": "Item Name Number 3",
+    "description": "This is a descriptive text for item number 3. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 86.55,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 4,
+    "uuid": "abc-0004-xyz",
+    "name": "Item Name Number 4",
+    "description": "This is a descriptive text for item number 4. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 7.58,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 5,
+    "uuid": "abc-0005-xyz",
+    "name": "Item Name Number 5",
+    "description": "This is a descriptive text for item number 5. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 44.38,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 6,
+    "uuid": "abc-0006-xyz",
+    "name": "Item Name Number 6",
+    "description": "This is a descriptive text for item number 6. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 75.0,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 7,
+    "uuid": "abc-0007-xyz",
+    "name": "Item Name Number 7",
+    "description": "This is a descriptive text for item number 7. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 58.73,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 8,
+    "uuid": "abc-0008-xyz",
+    "name": "Item Name Number 8",
+    "description": "This is a descriptive text for item number 8. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 93.11,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 9,
+    "uuid": "abc-0009-xyz",
+    "name": "Item Name Number 9",
+    "description": "This is a descriptive text for item number 9. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 35.73,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 10,
+    "uuid": "abc-0010-xyz",
+    "name": "Item Name Number 10",
+    "description": "This is a descriptive text for item number 10. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 44.59,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 11,
+    "uuid": "abc-0011-xyz",
+    "name": "Item Name Number 11",
+    "description": "This is a descriptive text for item number 11. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 81.49,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 12,
+    "uuid": "abc-0012-xyz",
+    "name": "Item Name Number 12",
+    "description": "This is a descriptive text for item number 12. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 67.13,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 13,
+    "uuid": "abc-0013-xyz",
+    "name": "Item Name Number 13",
+    "description": "This is a descriptive text for item number 13. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 22.09,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 14,
+    "uuid": "abc-0014-xyz",
+    "name": "Item Name Number 14",
+    "description": "This is a descriptive text for item number 14. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 90.57,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 15,
+    "uuid": "abc-0015-xyz",
+    "name": "Item Name Number 15",
+    "description": "This is a descriptive text for item number 15. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 43.8,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 16,
+    "uuid": "abc-0016-xyz",
+    "name": "Item Name Number 16",
+    "description": "This is a descriptive text for item number 16. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 90.5,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 17,
+    "uuid": "abc-0017-xyz",
+    "name": "Item Name Number 17",
+    "description": "This is a descriptive text for item number 17. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 6.88,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 18,
+    "uuid": "abc-0018-xyz",
+    "name": "Item Name Number 18",
+    "description": "This is a descriptive text for item number 18. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 90.69,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 19,
+    "uuid": "abc-0019-xyz",
+    "name": "Item Name Number 19",
+    "description": "This is a descriptive text for item number 19. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 38.22,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 20,
+    "uuid": "abc-0020-xyz",
+    "name": "Item Name Number 20",
+    "description": "This is a descriptive text for item number 20. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 85.23,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 21,
+    "uuid": "abc-0021-xyz",
+    "name": "Item Name Number 21",
+    "description": "This is a descriptive text for item number 21. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 75.1,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 22,
+    "uuid": "abc-0022-xyz",
+    "name": "Item Name Number 22",
+    "description": "This is a descriptive text for item number 22. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 54.65,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 23,
+    "uuid": "abc-0023-xyz",
+    "name": "Item Name Number 23",
+    "description": "This is a descriptive text for item number 23. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 34.49,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 24,
+    "uuid": "abc-0024-xyz",
+    "name": "Item Name Number 24",
+    "description": "This is a descriptive text for item number 24. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 82.48,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 25,
+    "uuid": "abc-0025-xyz",
+    "name": "Item Name Number 25",
+    "description": "This is a descriptive text for item number 25. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 89.99,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 26,
+    "uuid": "abc-0026-xyz",
+    "name": "Item Name Number 26",
+    "description": "This is a descriptive text for item number 26. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 45.03,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 27,
+    "uuid": "abc-0027-xyz",
+    "name": "Item Name Number 27",
+    "description": "This is a descriptive text for item number 27. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 3.61,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 28,
+    "uuid": "abc-0028-xyz",
+    "name": "Item Name Number 28",
+    "description": "This is a descriptive text for item number 28. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 37.12,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 29,
+    "uuid": "abc-0029-xyz",
+    "name": "Item Name Number 29",
+    "description": "This is a descriptive text for item number 29. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 19.83,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 30,
+    "uuid": "abc-0030-xyz",
+    "name": "Item Name Number 30",
+    "description": "This is a descriptive text for item number 30. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 35.29,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 31,
+    "uuid": "abc-0031-xyz",
+    "name": "Item Name Number 31",
+    "description": "This is a descriptive text for item number 31. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 20.34,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 32,
+    "uuid": "abc-0032-xyz",
+    "name": "Item Name Number 32",
+    "description": "This is a descriptive text for item number 32. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 86.52,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 33,
+    "uuid": "abc-0033-xyz",
+    "name": "Item Name Number 33",
+    "description": "This is a descriptive text for item number 33. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 48.49,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 34,
+    "uuid": "abc-0034-xyz",
+    "name": "Item Name Number 34",
+    "description": "This is a descriptive text for item number 34. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 44.33,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 35,
+    "uuid": "abc-0035-xyz",
+    "name": "Item Name Number 35",
+    "description": "This is a descriptive text for item number 35. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 9.13,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 36,
+    "uuid": "abc-0036-xyz",
+    "name": "Item Name Number 36",
+    "description": "This is a descriptive text for item number 36. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 29.75,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 37,
+    "uuid": "abc-0037-xyz",
+    "name": "Item Name Number 37",
+    "description": "This is a descriptive text for item number 37. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 75.42,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 38,
+    "uuid": "abc-0038-xyz",
+    "name": "Item Name Number 38",
+    "description": "This is a descriptive text for item number 38. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 27.6,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 39,
+    "uuid": "abc-0039-xyz",
+    "name": "Item Name Number 39",
+    "description": "This is a descriptive text for item number 39. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 66.89,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 40,
+    "uuid": "abc-0040-xyz",
+    "name": "Item Name Number 40",
+    "description": "This is a descriptive text for item number 40. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 31.84,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 41,
+    "uuid": "abc-0041-xyz",
+    "name": "Item Name Number 41",
+    "description": "This is a descriptive text for item number 41. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 45.76,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 42,
+    "uuid": "abc-0042-xyz",
+    "name": "Item Name Number 42",
+    "description": "This is a descriptive text for item number 42. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 52.85,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 43,
+    "uuid": "abc-0043-xyz",
+    "name": "Item Name Number 43",
+    "description": "This is a descriptive text for item number 43. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 37.65,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 44,
+    "uuid": "abc-0044-xyz",
+    "name": "Item Name Number 44",
+    "description": "This is a descriptive text for item number 44. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 6.72,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 45,
+    "uuid": "abc-0045-xyz",
+    "name": "Item Name Number 45",
+    "description": "This is a descriptive text for item number 45. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 49.18,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 46,
+    "uuid": "abc-0046-xyz",
+    "name": "Item Name Number 46",
+    "description": "This is a descriptive text for item number 46. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 84.25,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 47,
+    "uuid": "abc-0047-xyz",
+    "name": "Item Name Number 47",
+    "description": "This is a descriptive text for item number 47. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 76.95,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 48,
+    "uuid": "abc-0048-xyz",
+    "name": "Item Name Number 48",
+    "description": "This is a descriptive text for item number 48. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 79.48,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 49,
+    "uuid": "abc-0049-xyz",
+    "name": "Item Name Number 49",
+    "description": "This is a descriptive text for item number 49. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 79.71,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 50,
+    "uuid": "abc-0050-xyz",
+    "name": "Item Name Number 50",
+    "description": "This is a descriptive text for item number 50. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 73.69,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 51,
+    "uuid": "abc-0051-xyz",
+    "name": "Item Name Number 51",
+    "description": "This is a descriptive text for item number 51. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 37.67,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 52,
+    "uuid": "abc-0052-xyz",
+    "name": "Item Name Number 52",
+    "description": "This is a descriptive text for item number 52. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 86.87,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 53,
+    "uuid": "abc-0053-xyz",
+    "name": "Item Name Number 53",
+    "description": "This is a descriptive text for item number 53. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 91.91,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 54,
+    "uuid": "abc-0054-xyz",
+    "name": "Item Name Number 54",
+    "description": "This is a descriptive text for item number 54. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 98.43,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 55,
+    "uuid": "abc-0055-xyz",
+    "name": "Item Name Number 55",
+    "description": "This is a descriptive text for item number 55. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 88.65,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 56,
+    "uuid": "abc-0056-xyz",
+    "name": "Item Name Number 56",
+    "description": "This is a descriptive text for item number 56. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 3.66,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 57,
+    "uuid": "abc-0057-xyz",
+    "name": "Item Name Number 57",
+    "description": "This is a descriptive text for item number 57. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 50.78,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 58,
+    "uuid": "abc-0058-xyz",
+    "name": "Item Name Number 58",
+    "description": "This is a descriptive text for item number 58. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 97.48,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 59,
+    "uuid": "abc-0059-xyz",
+    "name": "Item Name Number 59",
+    "description": "This is a descriptive text for item number 59. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 45.75,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 60,
+    "uuid": "abc-0060-xyz",
+    "name": "Item Name Number 60",
+    "description": "This is a descriptive text for item number 60. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 97.8,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 61,
+    "uuid": "abc-0061-xyz",
+    "name": "Item Name Number 61",
+    "description": "This is a descriptive text for item number 61. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 73.28,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 62,
+    "uuid": "abc-0062-xyz",
+    "name": "Item Name Number 62",
+    "description": "This is a descriptive text for item number 62. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 96.38,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 63,
+    "uuid": "abc-0063-xyz",
+    "name": "Item Name Number 63",
+    "description": "This is a descriptive text for item number 63. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 66.32,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 64,
+    "uuid": "abc-0064-xyz",
+    "name": "Item Name Number 64",
+    "description": "This is a descriptive text for item number 64. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 27.85,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 65,
+    "uuid": "abc-0065-xyz",
+    "name": "Item Name Number 65",
+    "description": "This is a descriptive text for item number 65. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 57.24,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 66,
+    "uuid": "abc-0066-xyz",
+    "name": "Item Name Number 66",
+    "description": "This is a descriptive text for item number 66. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 93.95,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 67,
+    "uuid": "abc-0067-xyz",
+    "name": "Item Name Number 67",
+    "description": "This is a descriptive text for item number 67. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 38.44,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 68,
+    "uuid": "abc-0068-xyz",
+    "name": "Item Name Number 68",
+    "description": "This is a descriptive text for item number 68. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 52.11,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 69,
+    "uuid": "abc-0069-xyz",
+    "name": "Item Name Number 69",
+    "description": "This is a descriptive text for item number 69. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 44.81,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 70,
+    "uuid": "abc-0070-xyz",
+    "name": "Item Name Number 70",
+    "description": "This is a descriptive text for item number 70. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 24.14,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 71,
+    "uuid": "abc-0071-xyz",
+    "name": "Item Name Number 71",
+    "description": "This is a descriptive text for item number 71. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 58.45,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 72,
+    "uuid": "abc-0072-xyz",
+    "name": "Item Name Number 72",
+    "description": "This is a descriptive text for item number 72. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 72.92,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 73,
+    "uuid": "abc-0073-xyz",
+    "name": "Item Name Number 73",
+    "description": "This is a descriptive text for item number 73. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 94.61,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 74,
+    "uuid": "abc-0074-xyz",
+    "name": "Item Name Number 74",
+    "description": "This is a descriptive text for item number 74. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 25.36,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 75,
+    "uuid": "abc-0075-xyz",
+    "name": "Item Name Number 75",
+    "description": "This is a descriptive text for item number 75. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 1.54,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 76,
+    "uuid": "abc-0076-xyz",
+    "name": "Item Name Number 76",
+    "description": "This is a descriptive text for item number 76. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 23.47,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 77,
+    "uuid": "abc-0077-xyz",
+    "name": "Item Name Number 77",
+    "description": "This is a descriptive text for item number 77. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 34.85,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 78,
+    "uuid": "abc-0078-xyz",
+    "name": "Item Name Number 78",
+    "description": "This is a descriptive text for item number 78. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 41.6,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 79,
+    "uuid": "abc-0079-xyz",
+    "name": "Item Name Number 79",
+    "description": "This is a descriptive text for item number 79. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 74.64,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 80,
+    "uuid": "abc-0080-xyz",
+    "name": "Item Name Number 80",
+    "description": "This is a descriptive text for item number 80. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 18.66,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 81,
+    "uuid": "abc-0081-xyz",
+    "name": "Item Name Number 81",
+    "description": "This is a descriptive text for item number 81. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 82.8,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 82,
+    "uuid": "abc-0082-xyz",
+    "name": "Item Name Number 82",
+    "description": "This is a descriptive text for item number 82. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 93.44,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 83,
+    "uuid": "abc-0083-xyz",
+    "name": "Item Name Number 83",
+    "description": "This is a descriptive text for item number 83. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 14.71,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 84,
+    "uuid": "abc-0084-xyz",
+    "name": "Item Name Number 84",
+    "description": "This is a descriptive text for item number 84. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 98.33,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 85,
+    "uuid": "abc-0085-xyz",
+    "name": "Item Name Number 85",
+    "description": "This is a descriptive text for item number 85. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 1.43,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 86,
+    "uuid": "abc-0086-xyz",
+    "name": "Item Name Number 86",
+    "description": "This is a descriptive text for item number 86. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 78.37,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 87,
+    "uuid": "abc-0087-xyz",
+    "name": "Item Name Number 87",
+    "description": "This is a descriptive text for item number 87. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 71.64,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 88,
+    "uuid": "abc-0088-xyz",
+    "name": "Item Name Number 88",
+    "description": "This is a descriptive text for item number 88. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 16.1,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 89,
+    "uuid": "abc-0089-xyz",
+    "name": "Item Name Number 89",
+    "description": "This is a descriptive text for item number 89. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 7.92,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 90,
+    "uuid": "abc-0090-xyz",
+    "name": "Item Name Number 90",
+    "description": "This is a descriptive text for item number 90. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 28.98,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 91,
+    "uuid": "abc-0091-xyz",
+    "name": "Item Name Number 91",
+    "description": "This is a descriptive text for item number 91. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": false,
+    "score": 51.9,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 92,
+    "uuid": "abc-0092-xyz",
+    "name": "Item Name Number 92",
+    "description": "This is a descriptive text for item number 92. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 24.09,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 93,
+    "uuid": "abc-0093-xyz",
+    "name": "Item Name Number 93",
+    "description": "This is a descriptive text for item number 93. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 3.13,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 94,
+    "uuid": "abc-0094-xyz",
+    "name": "Item Name Number 94",
+    "description": "This is a descriptive text for item number 94. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 14.79,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 95,
+    "uuid": "abc-0095-xyz",
+    "name": "Item Name Number 95",
+    "description": "This is a descriptive text for item number 95. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": false,
+    "score": 19.49,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 96,
+    "uuid": "abc-0096-xyz",
+    "name": "Item Name Number 96",
+    "description": "This is a descriptive text for item number 96. It contains some extra padding to make it longer than a typical short field. Wait for it... ",
+    "isActive": true,
+    "score": 63.16,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 97,
+    "uuid": "abc-0097-xyz",
+    "name": "Item Name Number 97",
+    "description": "This is a descriptive text for item number 97. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 45.73,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 98,
+    "uuid": "abc-0098-xyz",
+    "name": "Item Name Number 98",
+    "description": "This is a descriptive text for item number 98. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... ",
+    "isActive": true,
+    "score": 17.98,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 99,
+    "uuid": "abc-0099-xyz",
+    "name": "Item Name Number 99",
+    "description": "This is a descriptive text for item number 99. It contains some extra padding to make it longer than a typical short field. Wait for it... Wait for it... Wait for it... Wait for it... ",
+    "isActive": false,
+    "score": 68.17,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  },
+  {
+    "id": 100,
+    "uuid": "abc-0100-xyz",
+    "name": "Item Name Number 100",
+    "description": "This is a descriptive text for item number 100. It contains some extra padding to make it longer than a typical short field. ",
+    "isActive": true,
+    "score": 73.51,
+    "tags": [
+      "testing",
+      "json",
+      "array",
+      "mock"
+    ],
+    "long_field": "This is a dedicated long field for testing truncation and expansion in table views. Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word Word "
+  }
+]

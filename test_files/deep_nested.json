@@ -1,0 +1,61 @@
+{
+  "project": "Lens JSON Viewer Test Data",
+  "version": "1.0.0",
+  "metadata": {
+    "author": "GitHub Copilot",
+    "description": "A deeply nested JSON file for testing hierarchical rendering and performance with long strings.",
+    "tags": ["test", "nested", "performance"],
+    "details": {
+      "level_1": {
+        "title": "Deep Level 1",
+        "content": "This is a moderately long string to test how the viewer handles text that might wrap or need truncation in some views. It contains enough words to span multiple lines if the container is narrow enough.",
+        "level_2": {
+          "id": "node-2",
+          "attributes": {
+            "color": "blue",
+            "importance": "high"
+          },
+          "level_3": {
+            "data": [1, 2, 3, 4, 5],
+            "level_4": {
+              "note": "Almost halfway there",
+              "long_string": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "level_5": {
+                "active": true,
+                "level_6": {
+                  "timestamp": "2026-02-09T12:00:00Z",
+                  "level_7": {
+                    "nested_array": [
+                      {
+                        "index": 0,
+                        "value": "Item 0",
+                        "deep_obj": {
+                          "level_8": {
+                            "final_boss": "You found me!",
+                            "very_long_text": "This is an extremely long string designed to test the horizontal scrolling or wrapping capabilities of the Lens JSON Viewer. It goes on and on, repeating the same pattern of words to ensure that any layout constraints are tested to their limit. Deep nesting combined with long strings is often a challenge for recursive rendering components because of memory usage and DOM depth. Hopefully, this file helps in identifying any bottlenecks in the current implementation. We are now at level 8 of the hierarchy, and there's one more to go if we want to be truly exhaustive."
+                          }
+                        }
+                      }
+                    ],
+                    "level_8": {
+                      "sibling": "I am a sibling of the array item's parent",
+                      "level_9": {
+                        "message": "Deepest level reached",
+                        "secret_code": "JSON_IS_AWESOME_2026",
+                        "recursive_structure": {
+                          "info": "End of the line.",
+                          "backlink": "root"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "large_content_block": "Another long string at the top level to see how it affects the initial view. It's important to test both deep and shallow long strings. This one is specifically placed near the root to compete with the 'metadata' object for visual attention. The viewer should be able to handle these without breaking the layout or causing excessive lag during expansion and contraction of nodes."
+}
