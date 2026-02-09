@@ -225,6 +225,7 @@ function setupArrayPagination(value: JsonValue | null) {
 }
 
 function handleSearchKeydown(event: KeyboardEvent) {
+  if (event.isComposing) return
   if (event.key === 'Enter') {
     event.preventDefault()
     handleSearchArray()
@@ -358,34 +359,52 @@ function handleFindStart() {
 function handleFindNext() {
   const query = findQuery.value.trim()
   if (!query) return
-  window.ipcRenderer.invoke('find-in-page', query, { forward: true, findNext: true })
+  if (query !== lastSearchedQuery.value) {
+    handleFindStart()
+  } else {
+    window.ipcRenderer.invoke('find-in-page', query, { forward: true, findNext: true })
+  }
 }
 
 function handleFindPrev() {
   const query = findQuery.value.trim()
   if (!query) return
-  window.ipcRenderer.invoke('find-in-page', query, { forward: false, findNext: true })
+  if (query !== lastSearchedQuery.value) {
+    handleFindStart()
+  } else {
+    window.ipcRenderer.invoke('find-in-page', query, { forward: false, findNext: true })
+  }
+}
+
+function handleFindAction(shiftKey: boolean) {
+  const query = findQuery.value.trim()
+  if (!query) {
+    handleFindStart() // Will clear search
+    return
+  }
+
+  if (query !== lastSearchedQuery.value || findTotalMatches.value === 0) {
+    // Query changed or no previous matches — start fresh
+    handleFindStart()
+  } else if (shiftKey) {
+    // Same query + Shift — previous match
+    handleFindPrev()
+  } else {
+    // Same query — next match
+    handleFindNext()
+  }
 }
 
 function handleFindKeydown(event: KeyboardEvent) {
+  if (event.isComposing) return
   if (event.key === 'Enter') {
     event.preventDefault()
-    const query = findQuery.value.trim()
-    if (!query) return
-
-    if (query !== lastSearchedQuery.value) {
-      // Query changed — start a fresh search
-      handleFindStart()
-    } else if (event.shiftKey) {
-      // Same query + Shift — previous match
-      handleFindPrev()
-    } else {
-      // Same query — next match
-      handleFindNext()
-    }
+    event.stopPropagation()
+    handleFindAction(event.shiftKey)
   }
   if (event.key === 'Escape') {
     event.preventDefault()
+    event.stopPropagation()
     handleCloseFindBar()
   }
 }
@@ -411,6 +430,28 @@ function handleGlobalKeydown(event: KeyboardEvent) {
   if ((event.metaKey || event.ctrlKey) && event.key === 'f') {
     event.preventDefault()
     handleOpenFindBar()
+    return
+  }
+
+  if (!findVisible.value) return
+
+  const target = event.target as HTMLElement | null
+  const isEditable = Boolean(
+    target &&
+      (target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.isContentEditable)
+  )
+
+  if (isEditable) return
+
+  if (event.key === 'Enter') {
+    event.preventDefault()
+    handleFindAction(event.shiftKey)
+  }
+  if (event.key === 'Escape') {
+    event.preventDefault()
+    handleCloseFindBar()
   }
 }
 
@@ -868,7 +909,7 @@ onUnmounted(() => {
 }
 
 .search-input {
-  min-width: 140px;
+  min-width: 170px;
   padding: 4px 10px;
   border-radius: 4px;
   border: 1px solid var(--border-primary);
