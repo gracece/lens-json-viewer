@@ -737,8 +737,7 @@ onUnmounted(() => {
             rows="8"
           ></textarea>
           <div class="input-actions">
-            <button class="ctrl-button" type="button" @click="handleClearInput">{{ t('clearInput') }}</button>
-            <button class="ctrl-button" type="button" @click="handleLoadFromInput">{{ t('loadInput') }}</button>
+            <button class="ctrl-button primary" type="button" @click="handleLoadFromInput">{{ t('loadInput') }}</button>
           </div>
         </div>
       </div>
@@ -840,7 +839,6 @@ onUnmounted(() => {
 .settings-button:hover {
   background: var(--bg-tertiary);
   border-color: var(--border-accent);
-  transform: rotate(45deg);
 }
 
 .header-tools {
@@ -1065,6 +1063,18 @@ onUnmounted(() => {
   white-space: nowrap;
 }
 
+.ctrl-button.primary {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.2);
+}
+
+.ctrl-button.primary:hover:not(:disabled) {
+  background: var(--accent-blue-hover);
+  border-color: var(--accent-blue-hover);
+}
+
 .ctrl-button:hover:not(:disabled) {
   background: var(--bg-tertiary);
   border-color: var(--border-secondary);
@@ -1192,7 +1202,9 @@ onUnmounted(() => {
 
 .open-button {
   margin-top: 4px;
-  padding: 8px 16px;
+  min-width: 96px;
+  height: 32px;
+  padding: 0 16px;
   border-radius: 999px;
   border: none;
   background: var(--accent-blue);
@@ -1259,8 +1271,16 @@ onUnmounted(() => {
 
 .input-actions {
   display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-actions .ctrl-button {
+  min-width: 96px;
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 13px;
 }
 
 /* Loading Overlay */

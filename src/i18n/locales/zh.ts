@@ -21,7 +21,7 @@ const zh: LocaleMessages = {
   inputTitle: '粘贴 JSON',
   inputHint: '支持 JSON 或 JSONL',
   inputPlaceholder: '在此粘贴 JSON 或 JSONL…',
-  loadInput: '从输入加载',
+  loadInput: '加载',
   clearInput: '清空',
   inputEmpty: '输入内容为空',
   jsonlLineError: 'JSONL 解析错误，行号',
