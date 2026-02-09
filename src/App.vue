@@ -317,10 +317,6 @@ async function handleLoadFromInput() {
   }
 }
 
-function handleClearInput() {
-  inputValue.value = ''
-}
-
 function handleSearchArray() {
   if (!Array.isArray(parsedValue.value)) return
 
