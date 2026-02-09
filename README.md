@@ -55,7 +55,13 @@ A lightweight, fast desktop application for viewing, searching, and formatting J
 
 ## 📸 Screenshots
 
-> *Coming soon — contributions welcome!*
+<p align="center">
+  <img src="docs/images/1.png" width="800" alt="Main Interface" />
+  <br/>
+  <img src="docs/images/2.png" width="800" alt="Detailed View" />
+  <br/>
+  <img src="docs/images/3.png" width="800" alt="Settings/Tools" />
+</p>
 
 ---
 
@@ -174,7 +180,6 @@ Contributions are welcome! Here's how you can help:
 
 - 🎨 **App Icon**: The project needs a proper icon design (currently uses a placeholder). A lens/magnifying glass themed icon in `.icns` (macOS), `.ico` (Windows), and `.png` formats would be great
 - 🌍 **Translations**: Add more languages beyond English and Chinese
-- 📸 **Screenshots**: Add screenshots or a demo GIF to the README
 - 🧪 **Tests**: Unit and integration test coverage
 - 📖 **Documentation**: Improve inline code documentation
 

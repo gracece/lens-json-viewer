@@ -56,7 +56,13 @@
 
 ## 📸 截图
 
-> *即将添加 —— 欢迎贡献！*
+<p align="center">
+  <img src="docs/images/1.png" width="800" alt="主界面" />
+  <br/>
+  <img src="docs/images/2.png" width="800" alt="详情查看" />
+  <br/>
+  <img src="docs/images/3.png" width="800" alt="设置与工具" />
+</p>
 
 ---
 
@@ -175,7 +181,6 @@ npm run build
 
 - 🎨 **应用图标**：项目需要一个正式的图标设计（目前使用占位图标）。希望设计一个以透镜/放大镜为主题的图标，提供 `.icns`（macOS）、`.ico`（Windows）和 `.png` 格式
 - 🌍 **多语言翻译**：在中英文基础上添加更多语言支持
-- 📸 **截图**：为 README 添加截图或演示 GIF
 - 🧪 **测试**：单元测试和集成测试覆盖
 - 📖 **文档**：完善代码内联文档
 
