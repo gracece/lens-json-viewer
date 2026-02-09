@@ -6,11 +6,13 @@ import { useDarkMode, type ThemeMode } from '../composables/useDarkMode'
 const props = defineProps<{
   visible: boolean
   pageSize: number
+  openBehavior: 'new-window' | 'reuse-window'
 }>()
 
 const emit = defineEmits<{
   (e: 'update:visible', value: boolean): void
   (e: 'update:pageSize', value: number): void
+  (e: 'update:openBehavior', value: 'new-window' | 'reuse-window'): void
 }>()
 
 const { t, locale } = useI18n()
@@ -45,13 +47,17 @@ function handleCustomPageSize(event: Event) {
 function handleThemeModeChange(mode: ThemeMode) {
   setThemeMode(mode)
 }
+
+function handleOpenBehaviorChange(value: 'new-window' | 'reuse-window') {
+  emit('update:openBehavior', value)
+}
 </script>
 
 <template>
   <el-dialog
     v-model="dialogVisible"
     :title="t('settings')"
-    width="480px"
+    width="650px"
     :close-on-click-modal="true"
     destroy-on-close
   >
@@ -105,6 +111,28 @@ function handleThemeModeChange(mode: ThemeMode) {
               :placeholder="t('pageSizeCustom')"
               @change="handleCustomPageSize"
             />
+          </div>
+        </div>
+
+        <div class="settings-row">
+          <span class="settings-label">{{ t('openBehaviorLabel') }}</span>
+          <div class="settings-control">
+            <button
+              class="lang-button"
+              :class="{ active: openBehavior === 'new-window' }"
+              type="button"
+              @click="handleOpenBehaviorChange('new-window')"
+            >
+              {{ t('openInNewWindow') }}
+            </button>
+            <button
+              class="lang-button"
+              :class="{ active: openBehavior === 'reuse-window' }"
+              type="button"
+              @click="handleOpenBehaviorChange('reuse-window')"
+            >
+              {{ t('openInSameWindow') }}
+            </button>
           </div>
         </div>
       </div>

@@ -16,6 +16,14 @@ const en = {
   emptyTitle: 'Ready to explore your JSON',
   emptyHint: 'Drag a JSON or JSONL file here, or click to browse',
   chooseFile: 'Choose a file',
+  inputTitle: 'Paste JSON',
+  inputHint: 'Paste JSON or JSONL data',
+  inputPlaceholder: 'Paste JSON or JSONL here…',
+  loadInput: 'Load from input',
+  clearInput: 'Clear',
+  inputEmpty: 'Input is empty',
+  jsonlLineError: 'JSONL parse error on line',
+  checkInput: 'Check input',
 
   // Error
   failedToParse: 'Failed to parse file',
@@ -26,7 +34,7 @@ const en = {
   jsonlUnavailable: 'JSONL content is unavailable',
 
   // Find in page
-  findPlaceholder: 'Find in page… (Enter to search)',
+  findPlaceholder: 'Find in page (Enter)',
   findPrevTitle: 'Previous (Shift+Enter)',
   findNextTitle: 'Next (Enter)',
   findCloseTitle: 'Close (Esc)',
@@ -98,6 +106,9 @@ const en = {
   settingsDesc: 'Customize your preferences.',
   pageSizeLabel: 'Load more count',
   pageSizeCustom: 'Custom',
+  openBehaviorLabel: 'When a file is already open',
+  openInNewWindow: 'Open in new window',
+  openInSameWindow: 'Open in current window',
   appearance: 'Appearance',
   themeMode: 'Theme',
   themeLight: 'Light',

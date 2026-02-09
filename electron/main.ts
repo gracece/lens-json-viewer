@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, Menu, ipcMain } from 'electron'
+import { app, BrowserWindow, dialog, Menu, ipcMain, screen } from 'electron'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
@@ -27,8 +27,11 @@ export const RENDERER_DIST = path.join(process.env.APP_ROOT, 'dist')
 
 process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL ? path.join(process.env.APP_ROOT, 'public') : RENDERER_DIST
 
-let win: BrowserWindow | null
-let pendingFile: string | null = null
+const windows = new Set<BrowserWindow>()
+const pendingFilePaths: string[] = []
+const windowHasFile = new Map<number, boolean>()
+type OpenBehavior = 'new-window' | 'reuse-window'
+let openBehavior: OpenBehavior = 'new-window'
 let currentLocale: string = 'en'
 
 const menuLabels: Record<string, Record<string, string>> = {
@@ -83,17 +86,50 @@ ipcMain.handle('read-json-file', async (_event, filePath: string) => {
 ipcMain.handle('select-json-file', async () => {
   const filePath = await selectJsonFile()
   if (!filePath) return null
-  return await readJsonFile(filePath)
+
+  const targetWin = getFocusedWindow()
+  if (targetWin) {
+    const hasFile = windowHasFile.get(targetWin.id)
+    const shouldReuse = !hasFile || openBehavior === 'reuse-window'
+    if (shouldReuse) {
+      await sendFileToWindow(targetWin, filePath)
+      return null
+    }
+  }
+
+  createWindow(filePath)
+
+  return null
 })
 
-ipcMain.handle('find-in-page', (_event, query: string, options?: Electron.FindInPageOptions) => {
-  if (!win) return null
-  return win.webContents.findInPage(query, options)
+ipcMain.handle('open-json-file', (event, filePath: string, options?: { reuseIfEmpty?: boolean }) => {
+  if (!filePath) return false
+
+  const senderWin = BrowserWindow.fromWebContents(event.sender)
+  if (senderWin) {
+    const hasFile = windowHasFile.get(senderWin.id)
+    const shouldReuse = !hasFile || openBehavior === 'reuse-window' || (options?.reuseIfEmpty && !hasFile)
+    if (shouldReuse) {
+      sendFileToWindow(senderWin, filePath)
+      return true
+    }
+  }
+
+  createWindow(filePath)
+
+  return true
 })
 
-ipcMain.handle('stop-find-in-page', (_event, action: 'clearSelection' | 'keepSelection' | 'activateSelection' = 'clearSelection') => {
-  if (!win) return null
-  return win.webContents.stopFindInPage(action)
+ipcMain.handle('find-in-page', (event, query: string, options?: Electron.FindInPageOptions) => {
+  const targetWin = BrowserWindow.fromWebContents(event.sender)
+  if (!targetWin) return null
+  return targetWin.webContents.findInPage(query, options)
+})
+
+ipcMain.handle('stop-find-in-page', (event, action: 'clearSelection' | 'keepSelection' | 'activateSelection' = 'clearSelection') => {
+  const targetWin = BrowserWindow.fromWebContents(event.sender)
+  if (!targetWin) return null
+  return targetWin.webContents.stopFindInPage(action)
 })
 
 ipcMain.handle('set-locale', (_event, locale: string) => {
@@ -102,26 +138,47 @@ ipcMain.handle('set-locale', (_event, locale: string) => {
   return true
 })
 
-async function openJsonFile(targetPath?: string) {
-  const filePath = targetPath ?? await selectJsonFile()
-  if (!filePath) return
+ipcMain.handle('set-open-behavior', (_event, behavior: OpenBehavior) => {
+  openBehavior = behavior === 'reuse-window' ? 'reuse-window' : 'new-window'
+  return true
+})
 
-  if (!win) {
-    pendingFile = filePath
-    return
-  }
+ipcMain.handle('set-window-title', (event, title: string) => {
+  const targetWin = BrowserWindow.fromWebContents(event.sender)
+  if (!targetWin) return false
+  targetWin.setTitle(title)
+  return true
+})
 
+async function sendFileToWindow(targetWin: BrowserWindow, filePath: string) {
   try {
     const payload = await readJsonFile(filePath)
-    win.webContents.send('file-opened', payload)
+    targetWin.webContents.send('file-opened', payload)
+    windowHasFile.set(targetWin.id, true)
   } catch (error) {
     dialog.showErrorBox('Open File Failed', error instanceof Error ? error.message : 'Unable to read file')
   }
 }
 
+async function openJsonFile(targetPath?: string) {
+  const filePath = targetPath ?? await selectJsonFile()
+  if (!filePath) return
+  const targetWin = getFocusedWindow()
+  if (targetWin) {
+    const hasFile = windowHasFile.get(targetWin.id)
+    const shouldReuse = !hasFile || openBehavior === 'reuse-window'
+    if (shouldReuse) {
+      await sendFileToWindow(targetWin, filePath)
+      return
+    }
+  }
+
+  createWindow(filePath)
+}
+
 async function selectJsonFile() {
-  if (!win) return null
-  const { canceled, filePaths } = await dialog.showOpenDialog(win, {
+  const parentWindow = BrowserWindow.getFocusedWindow() ?? Array.from(windows)[0] ?? undefined
+  const { canceled, filePaths } = await dialog.showOpenDialog(parentWindow, {
     title: 'Open JSON File - LensJsonViewer',
     properties: ['openFile'],
     filters: [
@@ -130,6 +187,10 @@ async function selectJsonFile() {
   })
   if (canceled || filePaths.length === 0) return null
   return filePaths[0]
+}
+
+function getFocusedWindow() {
+  return BrowserWindow.getFocusedWindow() ?? Array.from(windows)[0] ?? null
 }
 
 function buildMenu() {
@@ -177,7 +238,7 @@ function buildMenu() {
           label: labels.find,
           accelerator: 'CmdOrCtrl+F',
           click: () => {
-            win?.webContents.send('trigger-search')
+            getFocusedWindow()?.webContents.send('trigger-search')
           }
         }
       ]
@@ -218,40 +279,66 @@ function buildMenu() {
   Menu.setApplicationMenu(menu)
 }
 
-function createWindow() {
-  win = new BrowserWindow({
+function createWindow(filePath?: string) {
+  const focusedWin = BrowserWindow.getFocusedWindow() ?? Array.from(windows)[0] ?? null
+  const offset = 24
+  let x: number | undefined
+  let y: number | undefined
+
+  if (focusedWin) {
+    const bounds = focusedWin.getBounds()
+    const display = screen.getDisplayMatching(bounds)
+    const workArea = display.workArea
+
+    x = bounds.x + offset
+    y = bounds.y + offset
+
+    const maxX = workArea.x + workArea.width - 1200
+    const maxY = workArea.y + workArea.height - 800
+    if (x > maxX) x = workArea.x + offset
+    if (y > maxY) y = workArea.y + offset
+  }
+
+  const newWin = new BrowserWindow({
     icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
     width: 1200,
     height: 800,
+    x,
+    y,
     backgroundColor: '#f5f7fb',
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
     },
   })
 
-  win.on('closed', () => {
-    win = null
+  windows.add(newWin)
+  windowHasFile.set(newWin.id, false)
+
+  newWin.on('closed', () => {
+    windows.delete(newWin)
+    windowHasFile.delete(newWin.id)
   })
 
-  win.webContents.on('found-in-page', (_event, result) => {
-    win?.webContents.send('find-in-page-result', result)
+  newWin.webContents.on('found-in-page', (_event, result) => {
+    newWin.webContents.send('find-in-page-result', result)
   })
 
   // Test active push message to Renderer-process.
-  win.webContents.on('did-finish-load', async () => {
-    win?.webContents.send('main-process-message', (new Date).toLocaleString())
-    if (pendingFile) {
-      await openJsonFile(pendingFile)
-      pendingFile = null
+  newWin.webContents.on('did-finish-load', async () => {
+    newWin.webContents.send('main-process-message', (new Date).toLocaleString())
+    if (filePath) {
+      await sendFileToWindow(newWin, filePath)
     }
   })
 
   if (VITE_DEV_SERVER_URL) {
-    win.loadURL(VITE_DEV_SERVER_URL)
+    newWin.loadURL(VITE_DEV_SERVER_URL)
   } else {
     // win.loadFile('dist/index.html')
-    win.loadFile(path.join(RENDERER_DIST, 'index.html'))
+    newWin.loadFile(path.join(RENDERER_DIST, 'index.html'))
   }
+
+  return newWin
 }
 
 // Quit when all windows are closed, except on macOS. There, it's common
@@ -260,7 +347,6 @@ function createWindow() {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
-    win = null
   }
 })
 
@@ -274,10 +360,18 @@ app.on('activate', () => {
 
 app.on('open-file', (event, filePath) => {
   event.preventDefault()
-  openJsonFile(filePath)
+  if (app.isReady()) {
+    openJsonFile(filePath)
+  } else {
+    pendingFilePaths.push(filePath)
+  }
 })
 
 app.whenReady().then(() => {
-  createWindow()
+  if (pendingFilePaths.length > 0) {
+    pendingFilePaths.splice(0).forEach((filePath) => createWindow(filePath))
+  } else {
+    createWindow()
+  }
   buildMenu()
 })

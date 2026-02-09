@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { ElMessage } from 'element-plus'
 import JsonViewerEnhanced from './components/JsonViewerEnhanced.vue'
 import TableExtractor from './components/TableExtractor.vue'
@@ -29,9 +29,14 @@ const isParsing = ref(false)
 const isJsonlFile = ref(false)
 const loadingMessage = ref('')
 const rawFileSize = ref(0)
+const inputValue = ref('')
+const inputRef = ref<HTMLTextAreaElement | null>(null)
+const loadSource = ref<'file' | 'input' | null>(null)
 const isArrayPagination = ref(false)
 const arrayDisplayCount = ref(0)
 const ARRAY_PAGE_SIZE_KEY = 'app-array-page-size'
+const OPEN_BEHAVIOR_KEY = 'app-open-behavior'
+type OpenBehavior = 'new-window' | 'reuse-window'
 function loadArrayPageSize(): number {
   try {
     const stored = localStorage.getItem(ARRAY_PAGE_SIZE_KEY)
@@ -43,6 +48,14 @@ function loadArrayPageSize(): number {
   return 10
 }
 const arrayPageSize = ref(loadArrayPageSize())
+function loadOpenBehavior(): OpenBehavior {
+  try {
+    const stored = localStorage.getItem(OPEN_BEHAVIOR_KEY)
+    if (stored === 'reuse-window' || stored === 'new-window') return stored
+  } catch { /* ignore */ }
+  return 'new-window'
+}
+const openBehavior = ref<OpenBehavior>(loadOpenBehavior())
 const isLoadingMore = ref(false)
 const hasLoadedOnce = ref(false)
 const searchQuery = ref('')
@@ -77,6 +90,7 @@ const fileName = computed(() => {
   const segments = normalized.split('/')
   return segments[segments.length - 1] || normalized
 })
+const baseTitle = computed(() => t('appTitle'))
 const displayValue = computed(() => {
   if (!isArrayPagination.value) return parsedValue.value
   const arrayValue = parsedValue.value
@@ -115,10 +129,7 @@ function handleDroppedPaths(paths: string[]) {
 
   isLoading.value = true
   loadingMessage.value = t('readingFile')
-  window.ipcRenderer.invoke('read-json-file', targetPath)
-    .then((payload: LoadedFile) => {
-      loadFile(payload)
-    })
+  window.ipcRenderer.invoke('open-json-file', targetPath, { reuseIfEmpty: true })
     .catch((error: unknown) => {
       const message = error instanceof Error ? error.message : t('unableToReadFile')
       ElMessage.error(message)
@@ -151,10 +162,6 @@ function handleClickOpen() {
   isLoading.value = true
   loadingMessage.value = t('readingFile')
   window.ipcRenderer.invoke('select-json-file')
-    .then((payload: LoadedFile | null) => {
-      if (!payload) return
-      loadFile(payload)
-    })
     .catch((error: unknown) => {
       const message = error instanceof Error ? error.message : t('unableToReadFile')
       ElMessage.error(message)
@@ -166,6 +173,7 @@ function handleClickOpen() {
 }
 
 function parseJsonContent(content: string) {
+  const normalizedContent = content.replace(/^\uFEFF/, '')
   const workerSource = `
     self.onmessage = (event) => {
       const { content } = event.data;
@@ -204,7 +212,7 @@ function parseJsonContent(content: string) {
       reject(new Error(event.message || 'Worker failed to parse file'))
     }
 
-    worker.postMessage({ content })
+    worker.postMessage({ content: normalizedContent })
   })
 }
 
@@ -239,7 +247,78 @@ function handleSearchKeydown(event: KeyboardEvent) {
 function handleRetryOpen() {
   parseError.value = ''
   parsedValue.value = null
+  window.ipcRenderer.invoke('set-window-title', baseTitle.value)
   handleClickOpen()
+}
+
+function handleErrorAction() {
+  if (loadSource.value === 'input') {
+    parseError.value = ''
+    inputRef.value?.focus()
+    inputRef.value?.select()
+    return
+  }
+  handleRetryOpen()
+}
+
+async function handleLoadFromInput() {
+  const text = inputValue.value.trim()
+  if (!text) {
+    ElMessage.warning(t('inputEmpty'))
+    return
+  }
+
+  loadSource.value = 'input'
+  parseError.value = ''
+  parsedValue.value = null
+  isParsing.value = true
+  isJsonlFile.value = false
+  isArrayPagination.value = false
+  arrayDisplayCount.value = 0
+  searchQuery.value = ''
+  searchResults.value = []
+  isSearchActive.value = false
+  const normalizedText = text.replace(/^\uFEFF/, '')
+  rawFileSize.value = normalizedText.length
+  loadingMessage.value = t('parsingJson')
+
+  try {
+    try {
+      parsedValue.value = await parseJsonContent(normalizedText)
+      isJsonlFile.value = false
+    } catch {
+      const lines = normalizedText.split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
+      if (lines.length === 0) {
+        throw new Error(t('failedToParse'))
+      }
+      const entries: unknown[] = []
+      for (let index = 0; index < lines.length; index++) {
+        const line = lines[index]
+        try {
+          entries.push(JSON.parse(line))
+        } catch (error) {
+          const message = error instanceof Error ? error.message : t('failedToParse')
+          throw new Error(`${t('jsonlLineError')} ${index + 1}: ${message}`)
+        }
+      }
+      parsedValue.value = entries as JsonValue
+      isJsonlFile.value = true
+    }
+    filePath.value = t('inputTitle')
+    setupArrayPagination(parsedValue.value)
+    const title = `${t('inputTitle')} — ${baseTitle.value}`
+    window.ipcRenderer.invoke('set-window-title', title)
+    hasLoadedOnce.value = true
+  } catch (error) {
+    parseError.value = error instanceof Error ? error.message : t('failedToParse')
+    ElMessage.error(t('failedToParseJson'))
+  } finally {
+    isParsing.value = false
+  }
+}
+
+function handleClearInput() {
+  inputValue.value = ''
 }
 
 function handleSearchArray() {
@@ -303,6 +382,7 @@ function handleLoadAllArray() {
 }
 
 async function loadFile({ path, content, jsonlEntries, isJsonl }: LoadedFile) {
+  loadSource.value = 'file'
   filePath.value = path
   const fileContent = content ?? ''
   parseError.value = ''
@@ -327,6 +407,8 @@ async function loadFile({ path, content, jsonlEntries, isJsonl }: LoadedFile) {
       parsedValue.value = await parseJsonContent(fileContent)
     }
     setupArrayPagination(parsedValue.value)
+    const title = fileName.value ? `${fileName.value} — ${baseTitle.value}` : baseTitle.value
+    window.ipcRenderer.invoke('set-window-title', title)
   } catch (error) {
     parseError.value = error instanceof Error ? error.message : t('failedToParse')
     ElMessage.error(t('failedToParseJson'))
@@ -456,6 +538,9 @@ function handleGlobalKeydown(event: KeyboardEvent) {
 }
 
 onMounted(() => {
+  window.ipcRenderer.invoke('set-window-title', baseTitle.value)
+  window.ipcRenderer.invoke('set-open-behavior', openBehavior.value)
+
   window.ipcRenderer.on('file-opened', (_event, payload: LoadedFile) => {
     loadFile(payload)
   })
@@ -473,6 +558,13 @@ onMounted(() => {
   window.addEventListener('dragleave', handleDragLeave)
   window.addEventListener('drop', handleDrop)
   window.addEventListener('keydown', handleGlobalKeydown)
+})
+
+watch(openBehavior, (value) => {
+  try {
+    localStorage.setItem(OPEN_BEHAVIOR_KEY, value)
+  } catch { /* ignore */ }
+  window.ipcRenderer.invoke('set-open-behavior', value)
 })
 
 onUnmounted(() => {
@@ -516,7 +608,6 @@ onUnmounted(() => {
           <button class="find-close" type="button" :title="t('findCloseTitle')" @click="handleCloseFindBar">✕</button>
         </div>
         <div class="file-meta" v-if="filePath">
-          <span class="file-path" :title="filePath">{{ fileName }}</span>
           <span v-if="fileSizeLabel" class="file-size-badge">{{ fileSizeLabel }}</span>
           <span v-if="rawArrayTotalCount > 0" class="file-count-badge">{{ rawArrayTotalCount }} {{ t('items') }}</span>
         </div>
@@ -525,14 +616,20 @@ onUnmounted(() => {
     </header>
 
     <!-- Settings Dialog -->
-    <SettingsDialog v-model:visible="showSettings" v-model:pageSize="arrayPageSize" />
+    <SettingsDialog
+      v-model:visible="showSettings"
+      v-model:pageSize="arrayPageSize"
+      v-model:openBehavior="openBehavior"
+    />
 
     <main class="app-content">
       <div v-if="parseError" class="error-card">
         <div class="error-icon">⚠️</div>
         <h2>{{ t('failedToParse') }}</h2>
         <pre>{{ parseError }}</pre>
-        <button class="retry-button" type="button" @click="handleRetryOpen">{{ t('openAnotherFile') }}</button>
+        <button class="retry-button" type="button" @click="handleErrorAction">
+          {{ loadSource === 'input' ? t('checkInput') : t('openAnotherFile') }}
+        </button>
       </div>
 
       <template v-else-if="hasData">
@@ -619,11 +716,31 @@ onUnmounted(() => {
         />
       </template>
 
-      <div v-else class="empty-state" :class="{ 'is-dragover': isDragOver }" @click="handleClickOpen">
-        <div class="empty-icon">{{ isDragOver ? '📂' : '📄' }}</div>
-        <p class="empty-title">{{ isDragOver ? t('emptyTitleDragOver') : t('emptyTitle') }}</p>
-        <span class="empty-hint">{{ t('emptyHint') }}</span>
-        <button class="open-button" type="button">{{ t('chooseFile') }}</button>
+      <div v-else class="empty-wrapper">
+        <div class="empty-state" :class="{ 'is-dragover': isDragOver }" @click="handleClickOpen">
+          <div class="empty-icon">{{ isDragOver ? '📂' : '📄' }}</div>
+          <p class="empty-title">{{ isDragOver ? t('emptyTitleDragOver') : t('emptyTitle') }}</p>
+          <span class="empty-hint">{{ t('emptyHint') }}</span>
+          <button class="open-button" type="button">{{ t('chooseFile') }}</button>
+        </div>
+
+        <div class="input-card">
+          <div class="input-card-header">
+            <h3>{{ t('inputTitle') }}</h3>
+            <span class="input-card-hint">{{ t('inputHint') }}</span>
+          </div>
+          <textarea
+            v-model="inputValue"
+            ref="inputRef"
+            class="input-textarea"
+            :placeholder="t('inputPlaceholder')"
+            rows="8"
+          ></textarea>
+          <div class="input-actions">
+            <button class="ctrl-button" type="button" @click="handleClearInput">{{ t('clearInput') }}</button>
+            <button class="ctrl-button" type="button" @click="handleLoadFromInput">{{ t('loadInput') }}</button>
+          </div>
+        </div>
       </div>
     </main>
   </div>
@@ -738,7 +855,8 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 8px;
+  height: 28px;
+  padding: 0 8px;
   border-radius: 999px;
   border: 1px solid var(--border-primary);
   background: var(--bg-tertiary);
@@ -747,6 +865,9 @@ onUnmounted(() => {
 
 .find-input {
   min-width: 160px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0;
   border: none;
   outline: none;
   background: transparent;
@@ -763,7 +884,8 @@ onUnmounted(() => {
 
 .find-button,
 .find-close {
-  padding: 4px 10px;
+  height: 22px;
+  padding: 0 8px;
   border-radius: 999px;
   border: 1px solid var(--border-primary);
   background: var(--bg-secondary);
@@ -855,6 +977,12 @@ onUnmounted(() => {
 .app-content {
   flex: 1;
   padding: 0;
+}
+
+.empty-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .viewer-card {
@@ -1077,6 +1205,62 @@ onUnmounted(() => {
 .open-button:hover {
   background: var(--accent-blue-hover);
   transform: translateY(-1px);
+}
+
+.input-card {
+  margin: 0 10px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.input-card-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.input-card-hint {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.input-textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  border-radius: 8px;
+  border: 1px solid var(--border-primary);
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: ui-monospace, SFMono-Regular, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+.input-textarea:focus {
+  outline: none;
+  border-color: var(--border-accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.input-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 /* Loading Overlay */
